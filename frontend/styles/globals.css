@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.menu-container {
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 6s ease-in-out;
+}
+
+.parent-container {
+  overflow-x: hidden;
+}
+
+.menu-open {
+  transform: scaleY(1);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  margin-top: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: grey;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  border: solid;
+  border-color: grey;
+  border-width: 1px;
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(82, 81, 81); 
+  border-radius: 10px;
+  height: 20vh;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+@font-face {
+  font-family: "OwnOnest";
+  src: url('./fonts/Onest-VariableFont_wght.ttf')
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #ffffff;
+}
